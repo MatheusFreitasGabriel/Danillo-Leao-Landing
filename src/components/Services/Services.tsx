@@ -3,7 +3,6 @@
 /* Arquivo criado na data 04/03/2026 */
 /* Autor: Matheus de Freitas */
 
-import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 import { redirectToWhatsApp } from "@/src/utils/redirectToWhatsApp";
 import ServicesCards from "./ServicesCards";

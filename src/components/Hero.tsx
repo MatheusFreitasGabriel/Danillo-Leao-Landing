@@ -1,66 +1,63 @@
 "use client";
 
-/* Arquivo criado na data 02/03/2026 as 17:26 */
-/* Autor: Matheus de Freitas */
-
-import ButtonCta from "./ui/buttonCta";
 import Image from "next/image";
-import { motion, Variants } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
-const container: Variants = {
+const EASE_SMOOTH = [0.16, 1, 0.3, 1] as const;
+
+const containerVariants: Variants = {
   hidden: {},
   show: {
-    transition: {
-      staggerChildren: 0.25,
-    },
+    transition: { staggerChildren: 0.25 },
   },
 };
 
-const item: Variants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 40 },
   show: {
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.9,
-      ease: [0.16, 1, 0.3, 1], // easing sofisticado
-    },
+    transition: { duration: 0.9, ease: EASE_SMOOTH },
   },
 };
 
+const profileTransition = {
+  duration: 1,
+  delay: 0.5,
+  ease: EASE_SMOOTH,
+} as const;
+
 export default function Hero() {
   return (
-    <section className="relative h-screen w-screen">
-
-      {/* Background hero image */}
+    <section
+      className="relative h-dvh w-screen overflow-hidden"
+      aria-label="Apresentação"
+    >
       <Image
-        src="/images/hero-section-image-background.webp"
+        src="/images/imagem de fundo (1).webp"
         alt="Hero image"
         fill
         className="object-cover object-left z-0 lg:object-top"
         priority
+        unoptimized
       />
 
-      {/* Hero content */}
       <motion.div
-        variants={container}
+        variants={containerVariants}
         initial="hidden"
         animate="show"
-        className="relative z-10 flex flex-col gap-6 h-full justify-center px-6 items-center md:items-start lg:px-16 lg:gap-12"
+        className="relative z-20 flex flex-col justify-start pt-[20vh] md:pt-0 md:justify-center h-full w-full md:w-[65%] lg:w-[60%] px-6 lg:px-16 gap-3 lg:gap-6"
       >
-        
-        {/* Textual grouping */}
         <div className="flex flex-col gap-2 items-center md:items-start lg:gap-6">
-          
           <motion.span
-            variants={item}
+            variants={itemVariants}
             className="text-gold-light text-center md:text-left text-[14px] lg:text-[20px]"
           >
             Danillo Leão advogado de direito médico
           </motion.span>
           
           <motion.h1
-            variants={item}
+            variants={itemVariants}
             className="text-white text-center md:text-left font-bold text-4xl lg:text-7xl 2xl:text-8xl"
           >
             Excelência Jurídica <br className="hidden md:block" />
@@ -68,7 +65,7 @@ export default function Hero() {
           </motion.h1>
           
           <motion.p
-            variants={item}
+            variants={itemVariants}
             className="text-gray-hero text-center md:text-left font-regular text-[16px] lg:text-[20px] max-w-2xl"
           >
             Assessoria e defesa jurídica para médicos, clínicas e pacientes,
@@ -76,11 +73,30 @@ export default function Hero() {
           </motion.p>
         </div>
 
-        <motion.div variants={item}>
-          <ButtonCta>Entrar em contato</ButtonCta>
-        </motion.div>
-
+        
       </motion.div>
+
+      <div
+        className="absolute z-5 pointer-events-none w-[270px] h-[270px] rounded-full blur-[100px] left-1/2 -translate-x-1/2 bottom-[calc(55vh-335px)] md:left-auto md:translate-x-0 md:right-[200px] md:bottom-[calc(95vh-335px)] bg-gold-light"
+        aria-hidden
+      />
+
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={profileTransition}
+        className="absolute bottom-0 z-10 pointer-events-none left-1/2 -translate-x-1/2 w-[130%] h-[55%] md:left-auto md:translate-x-0 md:right-10 lg:right-16 md:w-[45%] lg:w-[40%] md:h-[95%]"
+      >
+        <Image
+          src="/images/profile-danillo.webp"
+          alt="Foto profissional de Danillo Leão"
+          fill
+          className="object-contain object-bottom drop-shadow-2xl" 
+          priority
+          unoptimized
+        />
+      </motion.div>
+
     </section>
   );
 }

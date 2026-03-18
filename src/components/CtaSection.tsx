@@ -49,7 +49,10 @@ const VIEWPORT = { once: true, amount: 0.3 } as const;
 
 export default function CtaSection() {
   return (
-    <section className="relative w-full py-[64px] 2xl:py-[128px] bg-[#000000] flex justify-center items-center overflow-hidden">
+    <section
+      id="contato"
+      className="relative w-full py-[64px] 2xl:py-[128px] bg-[#000000] flex justify-center items-center overflow-hidden scroll-mt-24"
+    >
       <Image
         src="/images/image-fundo-cta.jpg"
         alt="Biblioteca antiga"

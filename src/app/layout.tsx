@@ -3,6 +3,8 @@
 
 import "./globals.css";
 import localFont from "next/font/local";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const satoshiFont = localFont({
   src: [
@@ -35,7 +37,9 @@ export default function RootLayout({
     <html lang="pt-BR">
       <title>Danillo Leão - Direito Médico</title>
       <body className={satoshiFont.variable}>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

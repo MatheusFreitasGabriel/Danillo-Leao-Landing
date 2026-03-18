@@ -45,7 +45,10 @@ const ICON_CLASS =
 
 function MetricsSection() {
   return (
-    <section className="relative w-full flex flex-col justify-center items-center px-4 gap-6 md:gap-12 overflow-hidden">
+    <section
+      id="atuacao"
+      className="relative w-full flex flex-col justify-center items-center px-4 gap-6 md:gap-12 overflow-hidden scroll-mt-24"
+    >
       <motion.div
         variants={CONTAINER_VARIANTS}
         initial="hidden"

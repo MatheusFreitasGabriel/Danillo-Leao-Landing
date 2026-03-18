@@ -28,7 +28,10 @@ const VIEWPORT = { once: true, amount: 0.4 } as const;
 
 function ICanHelp() {
   return (
-    <section className="max-w-[1440px] w-full px-6 lg:px-16 flex flex-col gap-6 md:gap-12">
+    <section
+      id="ajuda"
+      className="max-w-[1440px] w-full px-6 lg:px-16 flex flex-col gap-6 md:gap-12 scroll-mt-24"
+    >
       <motion.div
         variants={CONTAINER_VARIANTS}
         initial="hidden"

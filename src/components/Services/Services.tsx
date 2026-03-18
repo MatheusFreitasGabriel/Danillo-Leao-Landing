@@ -30,7 +30,10 @@ const item: Variants = {
 
 export default function Services() {
   return (
-    <section className="max-w-[1440px] w-full mx-auto px-6 lg:px-16 flex flex-col items-stretch gap-6 md:gap-12">
+    <section
+      id="servicos"
+      className="max-w-[1440px] w-full mx-auto px-6 lg:px-16 flex flex-col items-stretch gap-6 md:gap-12 scroll-mt-24"
+    >
       <motion.div
         variants={container}
         initial="hidden"

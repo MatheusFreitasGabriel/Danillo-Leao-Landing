@@ -30,7 +30,8 @@ const profileTransition = {
 export default function Hero() {
   return (
     <section
-      className="relative h-dvh w-screen overflow-hidden"
+      id="inicio"
+      className="relative h-dvh w-screen overflow-hidden scroll-mt-24"
       aria-label="Apresentação"
     >
       <Image

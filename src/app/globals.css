@@ -37,3 +37,7 @@ body {
   color: var(--black);
   font-family: var(--font-satoshi), sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}

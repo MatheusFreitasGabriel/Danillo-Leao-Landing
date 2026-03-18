@@ -1,7 +1,8 @@
 import Hero from "../components/Hero";
 import MetricsSection from "../components/MetricsSection";
 import ICanHelp from "../components/ICanHelp/ICanHelp";
-import Services from "../components/Services/Services"
+import Services from "../components/Services/Services";
+import CtaSection from "../components/CtaSection";
 
 export default function Home() {
   return (
@@ -17,6 +18,9 @@ export default function Home() {
 
       {/* Services Section */}
       <Services></Services>
+
+      {/* CTA Section */}
+      <CtaSection></CtaSection>
     </main>
   );
 }

@@ -35,7 +35,7 @@ export default function Hero() {
       aria-label="Apresentação"
     >
       <Image
-        src="/images/imagem de fundo (1).webp"
+        src="/images/image-background-hero.webp"
         alt="Hero image"
         fill
         className="object-cover object-left z-0 lg:object-top"

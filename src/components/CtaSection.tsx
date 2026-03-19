@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
+import { redirectToWhatsApp } from "../utils/redirectToWhatsApp";
 
 const EASE_SMOOTH = [0.16, 1, 0.3, 1] as const;
 
@@ -104,6 +105,12 @@ export default function CtaSection() {
             <motion.button
               type="button"
               variants={TEXT_ITEM_VARIANTS}
+              
+              onClick={() => {
+                redirectToWhatsApp(
+                  "Olá, Danillo! Vim pelo seu website e me interessei em seus serviços.",
+                );
+              }}
               className="bg-gold-dark text-white px-6 py-3 font-medium text-[18px] cursor-pointer hover:bg-black transition-all duration-300"
             >
               Falar com Danillo
@@ -123,7 +130,7 @@ export default function CtaSection() {
               Prefere e-mail?
             </span>
             <p className="text-[14px] md:text-[20px] text-gold-light font-medium">
-              contato@danilloleao.com.br
+              contato@danilloleaoadv.com
             </p>
           </motion.div>
 
@@ -135,7 +142,7 @@ export default function CtaSection() {
               Prefere ligar?
             </span>
             <p className="text-[14px] md:text-[20px] text-gold-light font-medium">
-              +55 (11) 99999-9999
+              +55 (11) 91547-9003
             </p>
           </motion.div>
         </motion.div>

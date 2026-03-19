@@ -73,7 +73,7 @@ export default function Header() {
           </a>
 
           <a
-            href="#inicio"
+            href="inicio"
             aria-label="Ir para o início"
             className="md:hidden absolute left-1/2 -translate-x-1/2 flex items-center"
           >
@@ -178,7 +178,7 @@ export default function Header() {
                 {navItems.map((item) => (
                   <a
                     key={item.id}
-                    href={`#${item.id}`}
+                    href={`${item.id}`}
                     onClick={onNavClick}
                     className="text-black text-[22px] font-semibold tracking-tight"
                   >
@@ -193,7 +193,7 @@ export default function Header() {
                   onClick={() => {
                     setMobileOpen(false);
                     redirectToWhatsApp(
-                      "Olá, Danillo! Vim pelo seu site e gostaria de falar com você.",
+                      "Olá, Danillo! Vim pelo seu website e me interessei em seus serviços.",
                     );
                   }}
                   className="w-full bg-black text-white px-6 py-4 text-[16px] font-medium hover:bg-gold-dark transition-colors duration-300"

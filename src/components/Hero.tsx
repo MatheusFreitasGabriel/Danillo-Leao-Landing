@@ -50,20 +50,19 @@ export default function Hero() {
         className="relative z-20 flex flex-col justify-start pt-[20vh] md:pt-0 md:justify-center h-full w-full md:w-[65%] lg:w-[60%] px-6 lg:px-16 gap-3 lg:gap-6"
       >
         <div className="flex flex-col gap-2 items-center md:items-start lg:gap-6">
-          <motion.span
-            variants={itemVariants}
+          <span
+          
             className="text-gold-light text-center md:text-left text-[14px] lg:text-[20px]"
           >
             Danillo Leão advogado de direito médico
-          </motion.span>
+          </span>
           
-          <motion.h1
-            variants={itemVariants}
+          <h1
             className="text-white text-center md:text-left font-bold text-4xl lg:text-7xl 2xl:text-8xl"
           >
             Excelência Jurídica <br className="hidden md:block" />
             em Direito Médico
-          </motion.h1>
+          </h1>
           
           <motion.p
             variants={itemVariants}

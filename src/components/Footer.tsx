@@ -9,8 +9,8 @@ const NAV_ITEMS = [
 ] as const;
 
 const EMAIL = "contato@danilloleao.com.br";
-const WHATSAPP_E164 = "5511940774506";
-const WHATSAPP_DISPLAY = "+55 (11) 94077-4506";
+const WHATSAPP_E164 = "5511915479003";
+const WHATSAPP_DISPLAY = "+55 (11) 91547-9003";
 
 export default function Footer() {
   const year = new Date().getFullYear();

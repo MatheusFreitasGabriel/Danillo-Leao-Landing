@@ -8,7 +8,7 @@ const NAV_ITEMS = [
   { href: "/#contato", label: "Contato" },
 ] as const;
 
-const EMAIL = "contato@danilloleao.com.br";
+const EMAIL = "contato@danilloleaoadv.com";
 const WHATSAPP_E164 = "5511915479003";
 const WHATSAPP_DISPLAY = "+55 (11) 91547-9003";
 

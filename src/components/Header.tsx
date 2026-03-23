@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { redirectToWhatsApp } from "@/src/utils/redirectToWhatsApp";
+import Link from "next/link";
 
 type NavItem = { id: string; label: string };
 
@@ -58,8 +59,8 @@ export default function Header() {
         className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${headerClassName}`}
       >
         <div className="mx-auto max-w-[1440px] px-6 lg:px-16 h-[76px] flex items-center justify-between">
-          <a
-            href="#inicio"
+          <Link
+            href="/#inicio"
             aria-label="Ir para o início"
             className="hidden md:flex items-center"
           >
@@ -70,10 +71,10 @@ export default function Header() {
               height={46}
               priority
             />
-          </a>
+          </Link>
 
-          <a
-            href="inicio"
+          <Link
+            href="/#inicio"
             aria-label="Ir para o início"
             className="md:hidden absolute left-1/2 -translate-x-1/2 flex items-center"
           >
@@ -84,7 +85,7 @@ export default function Header() {
               height={40}
               priority
             />
-          </a>
+          </Link>
 
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (

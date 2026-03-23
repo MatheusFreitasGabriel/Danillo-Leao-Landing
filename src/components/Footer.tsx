@@ -22,7 +22,7 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <a href="#inicio" aria-label="Ir para o início" className="w-fit">
               <Image
-                src="/images/logo.png"
+                src="/images/logotype.png"
                 alt="Logo Danillo Leão"
                 width={170}
                 height={50}

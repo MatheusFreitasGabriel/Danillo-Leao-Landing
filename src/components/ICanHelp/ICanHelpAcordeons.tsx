@@ -4,6 +4,7 @@ import { useState, useCallback, memo } from "react";
 import { motion, type Variants } from "framer-motion";
 import { helpItems } from "./ICanHelpData";
 import { redirectToWhatsApp } from "@/src/utils/redirectToWhatsApp";
+import Image from "next/image"
 
 const ITEM_VARIANTS: Variants = {
   hidden: { opacity: 0, y: 50 },
@@ -57,7 +58,19 @@ function ICanHelpAcordeons() {
             className="flex flex-row w-full items-stretch"
           >
             {/* Bloco decorativo lateral */}
-            <div className="relative hidden md:block md:w-64 shrink-0 md:mr-6 bg-gold-dark" aria-hidden="true" />
+            <div
+              className="relative hidden md:block md:w-64 shrink-0 md:mr-6 overflow-hidden bg-gold-dark"
+              aria-hidden="true"
+            >
+              <Image
+                src={item.image} // Usando a URL da imagem do objeto helpItems
+                alt="" // Alt vazio para imagens decorativas (aria-hidden="true" no pai)
+                fill // Preenche o contêiner pai
+                sizes="(min-width: 768px) 256px, 0px" // Define tamanhos para otimização
+                className="object-cover transition-transform duration-500 hover:scale-105 opacity-60" // Cobre o espaço e adiciona efeito hover opcional
+                priority={item.id === 1} // Carrega a primeira imagem com prioridade
+              />
+            </div>
 
             <div className="flex flex-col justify-between w-full gap-6 md:flex-row py-6 pb-12 border-b border-[#808080]">
               <div className="flex flex-col min-w-[120px]">

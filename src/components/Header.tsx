@@ -64,7 +64,7 @@ export default function Header() {
             className="hidden md:flex items-center"
           >
             <Image
-              src="/images/logo.png"
+              src="/images/logotype.png"
               alt="Logo Danillo Leão"
               width={160}
               height={46}
@@ -78,7 +78,7 @@ export default function Header() {
             className="md:hidden absolute left-1/2 -translate-x-1/2 flex items-center"
           >
             <Image
-              src="/images/logo.png"
+              src="/images/logotype.png"
               alt="Logo Danillo Leão"
               width={140}
               height={40}

@@ -73,7 +73,7 @@ export default function CtaSection() {
           className="flex flex-col gap-12"
         >
           <Image
-            src="/images/logo.png"
+            src="/images/logotype.png"
             alt="logotipo Danillo Leão"
             width={180}
             height={52}

@@ -7,6 +7,7 @@ import localFont from "next/font/local";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { GoogleAnalytics } from '@next/third-parties/google';
+import Script from 'next/script';
 
 // Configuração central de SEO e Metadados da aplicação
 export const metadata: Metadata = {
@@ -69,6 +70,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head>
+      <meta name="adopt-website-id" content="fe0581d9-ac07-4b8d-91c3-3e88d1c9311d" />
+      <Script 
+          src="//tag.goadopt.io/injector.js?website_code=fe0581d9-ac07-4b8d-91c3-3e88d1c9311d"
+          strategy="afterInteractive"
+          className="adopt-injector"
+        />
+      </head>
       
       <body className={satoshiFont.variable}>
         <Header />

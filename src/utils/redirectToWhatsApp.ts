@@ -1,7 +1,5 @@
-// Define o tipo da função gtag
-type GtagFn = (command: string, targetId: string, config?: object) => void;
+type GtagFn = (command: string, eventName: string, params?: object) => void;
 
-// Estende a interface global do Window
 declare global {
   interface Window {
     gtag?: GtagFn;
@@ -9,10 +7,8 @@ declare global {
 }
 
 export function redirectToWhatsApp(message: string) {
-    // Agora você pode usar window.gtag sem erro e com autocomplete
     if (typeof window !== "undefined" && window.gtag) {
-        window.gtag('event', 'conversion', {
-            'send_to': 'AW-18112331364/your-label-here',
+        window.gtag('event', 'manual_event_CONTACT', {
         });
     }
 

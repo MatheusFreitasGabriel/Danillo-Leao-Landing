@@ -77,6 +77,14 @@ export default function RootLayout({
           strategy="afterInteractive"
           className="adopt-injector"
         />
+        <Script id="google-ads" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18112331364');
+          `}
+        </Script>
       </head>
       
       <body className={satoshiFont.variable}>

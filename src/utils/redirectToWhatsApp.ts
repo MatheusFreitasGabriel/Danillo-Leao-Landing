@@ -7,13 +7,27 @@ declare global {
 }
 
 export function redirectToWhatsApp(message: string) {
-    if (typeof window !== "undefined" && window.gtag) {
-        window.gtag('event', 'manual_event_CONTACT', {
-        });
-    }
+  const telefoneDanillo = "5511915479003";
+  const url = `https://wa.me/${telefoneDanillo}?text=${encodeURIComponent(message)}`;
 
-    const telefoneDanillo = "5511915479003";
-    const url = `https://wa.me/${telefoneDanillo}?text=${encodeURIComponent(message)}`;
-    
-    window.open(url, "_blank");
+  const novaAba = typeof window !== "undefined" ? window.open("about:blank", "_blank") : null;
+
+  
+  const callback = function () {
+    if (novaAba) {
+      novaAba.location.href = url;
+    } else if (typeof window !== "undefined") {
+      window.location.href = url;
+    }
+  };
+
+  // Verifica se o gtag existe na página
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag('event', 'conversion_event_contact', {
+      'event_callback': callback,
+      'event_timeout': 2000,
+    });
+  } else {
+    callback();
+  }
 }

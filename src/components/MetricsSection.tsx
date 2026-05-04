@@ -86,7 +86,7 @@ function MetricsSection() {
             className="flex flex-col gap-4 max-w-md md:gap-6"
           >
             <span className="text-[14px] text-gray">{metric.label}</span>
-            <h3 className="text-5xl font-bold text-gold-dark">{metric.value}</h3>
+            <h3 className="text-5xl font-bold text-black">{metric.value}</h3>
             <p className="text-[16px] font-medium text-gray-dark">
               {metric.description}
             </p>

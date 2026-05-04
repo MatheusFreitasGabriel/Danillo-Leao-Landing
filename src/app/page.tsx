@@ -3,24 +3,28 @@ import MetricsSection from "../components/MetricsSection";
 import ICanHelp from "../components/ICanHelp/ICanHelp";
 import Services from "../components/Services/Services";
 import CtaSection from "../components/CtaSection";
+import Presentation from "../components/Presentation"
 
 export default function Home() {
   return (
     <main className="w-full flex flex-col gap-16 overflow-hidden items-center md:gap-24">
       {/* Hero Section */}
-      <Hero></Hero>
+      <Hero/>
 
       {/* Metrics Section */}
-      <MetricsSection></MetricsSection>
+      <MetricsSection/>
+
+      {/* Metrics Section */}
+      <Presentation/>
 
       {/* I Can Help Section */}
-      <ICanHelp></ICanHelp>
+      <ICanHelp/>
 
       {/* Services Section */}
-      <Services></Services>
+      <Services/>
 
       {/* CTA Section */}
-      <CtaSection></CtaSection>
+      <CtaSection/>
     </main>
   );
 }

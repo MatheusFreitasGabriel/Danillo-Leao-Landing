@@ -72,7 +72,7 @@ export default function ServicesCards() {
               ease: EASE_SMOOTH,
               delay: index * 0.25,
             }}
-            className="relative w-full bg-[#000000] text-white rounded-4xl px-6 py-12 md:px-9 md:py-24"
+            className="relative w-full bg-[#000000] text-white rounded-2xl px-6 py-12 md:px-9 md:py-24"
           >
             <div className="relative z-10 flex flex-col items-start gap-12">
               <div className="flex flex-col gap-6">
@@ -96,7 +96,7 @@ export default function ServicesCards() {
               src={item.imageBackground}
               alt="imagem de fundo"
               fill
-              className="object-cover opacity-30 z-0 rounded-4xl"
+              className="object-cover opacity-30 z-0 rounded-2xl"
             />
           </motion.article>
         );

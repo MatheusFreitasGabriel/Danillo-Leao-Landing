@@ -63,6 +63,28 @@ const satoshiFont = localFont({
   display: "swap",
 });
 
+const frauncesFont = localFont({
+  src: [
+    {
+      path: "../fonts/Fraunces-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Fraunces-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Fraunces-SemiBold.woff2",
+      weight: "600",
+      style: "normal",
+    },
+  ],
+  variable: "--font-fraunces",
+  display: "swap",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -87,7 +109,7 @@ export default function RootLayout({
         </Script>
       </head>
       
-      <body className={satoshiFont.variable}>
+      <body className={`${satoshiFont.variable} ${frauncesFont.variable} antialiased`}>
         <Header />
         {children}
         <Footer />

@@ -1,4 +1,7 @@
+import { ConstrantsVariables } from "./globalVariables";
+
 type GtagFn = (command: string, eventName: string, params?: object) => void;
+
 
 declare global {
   interface Window {
@@ -7,7 +10,7 @@ declare global {
 }
 
 export function redirectToWhatsApp(message: string) {
-  const telefoneDanillo = "5511915479003";
+  const telefoneDanillo = ConstrantsVariables.phone;
   const url = `https://wa.me/${telefoneDanillo}?text=${encodeURIComponent(message)}`;
 
   const novaAba = typeof window !== "undefined" ? window.open("about:blank", "_blank") : null;

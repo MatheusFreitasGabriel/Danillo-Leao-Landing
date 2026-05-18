@@ -142,7 +142,7 @@ export default function CtaSection() {
               Prefere ligar?
             </span>
             <p className="text-[14px] md:text-[20px] text-gold-light font-medium">
-              +55 (11) 91547-9003
+              +55 (11) 93951-8631
             </p>
           </motion.div>
         </motion.div>
